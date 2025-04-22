@@ -1,0 +1,370 @@
+import React from 'react';
+import { CheckCircle, Star, Users, BookOpen, HelpCircle, Mail, ShieldCheck, FileText, ArrowRight } from 'lucide-react'; // Import icons
+// If storing the image locally (e.g., in src/assets), you might import it:
+// import instructorImage from './assets/your-image-filename.jpg';
+
+// Main App Component
+function App() {
+  return (
+    // Using Tailwind CSS for overall layout and styling
+    <div className="min-h-screen bg-gray-50 font-sans text-gray-800">
+      <HeroSection />
+      <QuickOverview />
+      <Advantages />
+      <Testimonials />
+      {/* Added second CTA section as requested */}
+      <CTASection />
+      <About />
+      <Modules />
+      {/* Original CTA section */}
+      <CTASection />
+      <FAQ />
+      <Footer />
+    </div>
+  );
+}
+
+export default App; // Export the main App component
+
+// Hero Section Component
+function HeroSection() {
+  return (
+    <section className="hero bg-gradient-to-r from-blue-600 to-indigo-700 text-white text-center py-20 px-6 rounded-b-lg shadow-lg">
+      {/* Main headline */}
+      <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+        Welcome to the <strong>Ultimate Shopify Dropshipping Masterclass</strong>!
+      </h1>
+      {/* Sub-headline */}
+      <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto">
+        Learn how to create, optimize, and grow your online store <strong>without holding inventory</strong>. This course will give you <strong>all the keys</strong> to offer a seamless experience, build a strong brand, and generate sales. <strong>Join us and launch your success now</strong>!
+      </p>
+      {/* Call to Action Button */}
+      <button className="cta-button bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-3 px-8 rounded-full shadow-md transition duration-300 ease-in-out transform hover:scale-105 flex items-center justify-center mx-auto">
+        Start Now <ArrowRight className="ml-2 h-5 w-5" />
+      </button>
+    </section>
+  );
+}
+
+// Quick Overview Section Component
+function QuickOverview() {
+  return (
+    <section className="overview container mx-auto px-6 py-16 text-center">
+      <h2 className="text-3xl font-semibold mb-8 text-gray-800">Quick Overview</h2>
+      {/* List of key points */}
+      <ul className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        <li className="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4">
+          <CheckCircle className="text-green-500 h-8 w-8 flex-shrink-0" />
+          <span className="text-lg text-gray-700">Build your professional store</span>
+        </li>
+        <li className="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4">
+          <CheckCircle className="text-green-500 h-8 w-8 flex-shrink-0" />
+          <span className="text-lg text-gray-700">Select reliable suppliers</span>
+        </li>
+        <li className="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4">
+          <CheckCircle className="text-green-500 h-8 w-8 flex-shrink-0" />
+          <span className="text-lg text-gray-700">Master advertising to boost sales</span>
+        </li>
+      </ul>
+    </section>
+  );
+}
+
+// Advantages Section Component
+function Advantages() {
+  return (
+    <section className="advantages bg-gray-100 py-16 px-6">
+      <div className="container mx-auto text-center">
+        <h2 className="text-3xl font-semibold mb-12 text-gray-800">Key Advantages</h2>
+        {/* Grid layout for advantages */}
+        <div className="advantage-list grid grid-cols-1 md:grid-cols-3 gap-10">
+          {/* Advantage Item 1 */}
+          <div className="advantage-item bg-white p-8 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+            <h3 className="text-xl font-semibold mb-3 text-blue-600">Save Time</h3>
+            <p className="text-gray-600">All steps are explained clearly and concisely.</p>
+          </div>
+          {/* Advantage Item 2 */}
+          <div className="advantage-item bg-white p-8 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+            <h3 className="text-xl font-semibold mb-3 text-blue-600">Save Money</h3>
+            <p className="text-gray-600">Avoid common mistakes and unnecessary expenses with our advice.</p>
+          </div>
+          {/* Advantage Item 3 */}
+          <div className="advantage-item bg-white p-8 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+            <h3 className="text-xl font-semibold mb-3 text-blue-600">Accelerate Your Results</h3>
+            <p className="text-gray-600">Proven strategies to reach your first $10 000 in sales quickly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// Testimonials Section Component
+function Testimonials() {
+  return (
+    <section className="testimonials container mx-auto px-6 py-16">
+      <h2 className="text-3xl font-semibold text-center mb-12 text-gray-800">What Our Customers Say</h2>
+      {/* Grid layout for testimonials */}
+      <div className="testimonial-list grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+        {/* Testimonial 1 */}
+        <div className="testimonial bg-white p-8 rounded-lg shadow-md border-l-4 border-blue-500">
+          <p className="text-gray-600 italic mb-4">
+            "Thanks to this course, I created my store in less than a week and made my first sales in just 10 days. Incredible!"
+          </p>
+          <div className="flex items-center">
+            <Star className="text-yellow-400 h-5 w-5 mr-1" />
+            <Star className="text-yellow-400 h-5 w-5 mr-1" />
+            <Star className="text-yellow-400 h-5 w-5 mr-1" />
+            <Star className="text-yellow-400 h-5 w-5 mr-1" />
+            <Star className="text-yellow-400 h-5 w-5 mr-2" />
+            <strong className="text-gray-800 font-semibold">- Sarah L., 28</strong>
+          </div>
+        </div>
+        {/* Testimonial 2 */}
+        <div className="testimonial bg-white p-8 rounded-lg shadow-md border-l-4 border-blue-500">
+          <p className="text-gray-600 italic mb-4">
+            "I loved the clarity of the explanations and the responsive support. I now have a stable source of additional income."
+          </p>
+           <div className="flex items-center">
+            <Star className="text-yellow-400 h-5 w-5 mr-1" />
+            <Star className="text-yellow-400 h-5 w-5 mr-1" />
+            <Star className="text-yellow-400 h-5 w-5 mr-1" />
+            <Star className="text-yellow-400 h-5 w-5 mr-1" />
+            <Star className="text-gray-300 h-5 w-5 mr-2" /> {/* Example of 4 stars */}
+            <strong className="text-gray-800 font-semibold">- Michael K., 35</strong>
+          </div>
+        </div>
+        {/* Testimonial 3 - Added */}
+        <div className="testimonial bg-white p-8 rounded-lg shadow-md border-l-4 border-blue-500">
+          <p className="text-gray-600 italic mb-4">
+            "The modules on product research and Facebook Ads were game-changers. My conversion rate has doubled!"
+          </p>
+           <div className="flex items-center">
+            <Star className="text-yellow-400 h-5 w-5 mr-1" />
+            <Star className="text-yellow-400 h-5 w-5 mr-1" />
+            <Star className="text-yellow-400 h-5 w-5 mr-1" />
+            <Star className="text-yellow-400 h-5 w-5 mr-1" />
+            <Star className="text-yellow-400 h-5 w-5 mr-2" />
+            <strong className="text-gray-800 font-semibold">- Emily R., 31</strong>
+          </div>
+        </div>
+        {/* Testimonial 4 - Added */}
+        <div className="testimonial bg-white p-8 rounded-lg shadow-md border-l-4 border-blue-500">
+          <p className="text-gray-600 italic mb-4">
+            "As a complete beginner, I found this course incredibly easy to follow. The step-by-step guidance made setting up my Shopify store a breeze."
+          </p>
+           <div className="flex items-center">
+            <Star className="text-yellow-400 h-5 w-5 mr-1" />
+            <Star className="text-yellow-400 h-5 w-5 mr-1" />
+            <Star className="text-yellow-400 h-5 w-5 mr-1" />
+            <Star className="text-yellow-400 h-5 w-5 mr-1" />
+            <Star className="text-yellow-400 h-5 w-5 mr-2" />
+            <strong className="text-gray-800 font-semibold">- David P., 42</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// About Section Component - Updated: Removed <img> tag
+function About() {
+  return (
+    <section className="about bg-blue-50 py-16 px-6">
+      <div className="container mx-auto text-center max-w-3xl">
+        {/* Using the icon instead of a photo */}
+        <Users className="text-blue-600 h-16 w-16 mx-auto mb-6" /> {/* Increased icon size slightly */}
+        <h2 className="text-3xl font-semibold mb-6 text-gray-800">About the Instructor</h2>
+        {/* Image tag removed as requested */}
+        <p className="text-lg text-gray-700 leading-relaxed">
+          With 5 years of e-commerce success and multiple thriving stores, I’ve helped over 50 entrepreneurs launch and scale their dropshipping businesses. Through my collaboration with FormaXpert, I’m now sharing my proven strategies to help Africans begin their dropshipping journey.
+        </p>
+      </div>
+    </section>
+  );
+}
+
+// Modules Section Component
+function Modules() {
+  return (
+    <section className="modules container mx-auto px-6 py-16">
+      <h2 className="text-3xl font-semibold text-center mb-12 text-gray-800">Detailed Course Content</h2>
+      {/* List of modules */}
+      <ul className="space-y-6 max-w-2xl mx-auto">
+        <li className="flex items-start space-x-4 p-4 bg-white rounded-lg shadow">
+          <BookOpen className="text-blue-500 h-6 w-6 mt-1 flex-shrink-0" />
+          <div>
+            <strong className="text-lg text-gray-900">Module 1:</strong>
+            <span className="block text-gray-600"> Create a fully functional Shopify dropshipping store from scratch.</span>
+          </div>
+        </li>
+        <li className="flex items-start space-x-4 p-4 bg-white rounded-lg shadow">
+          <BookOpen className="text-blue-500 h-6 w-6 mt-1 flex-shrink-0" />
+          <div>
+            <strong className="text-lg text-gray-900">Module 2:</strong>
+            <span className="block text-gray-600"> Understand the dropshipping business model, how it works, and its profit potential.</span>
+          </div>
+        </li>
+        <li className="flex items-start space-x-4 p-4 bg-white rounded-lg shadow">
+          <BookOpen className="text-blue-500 h-6 w-6 mt-1 flex-shrink-0" />
+          <div>
+            <strong className="text-lg text-gray-900">Module 3:</strong>
+            <span className="block text-gray-600"> Identify winning products using specific criteria to maximize sales.</span>
+          </div>
+        </li>
+         <li className="flex items-start space-x-4 p-4 bg-white rounded-lg shadow">
+          <BookOpen className="text-blue-500 h-6 w-6 mt-1 flex-shrink-0" />
+          <div>
+            <strong className="text-lg text-gray-900">Module 4:</strong>
+            <span className="block text-gray-600"> Find reliable suppliers on AliExpress and easily import products into your store.</span>
+          </div>
+        </li>
+         <li className="flex items-start space-x-4 p-4 bg-white rounded-lg shadow">
+          <BookOpen className="text-blue-500 h-6 w-6 mt-1 flex-shrink-0" />
+          <div>
+            <strong className="text-lg text-gray-900">Module 5:</strong>
+            <span className="block text-gray-600"> Create a strong visual identity with an attractive logo and engaging sections (hero, image with text, featured products, etc.).</span>
+          </div>
+        </li>
+        <li className="flex items-start space-x-4 p-4 bg-white rounded-lg shadow">
+          <BookOpen className="text-blue-500 h-6 w-6 mt-1 flex-shrink-0" />
+          <div>
+            <strong className="text-lg text-gray-900">Module 6:</strong>
+            <span className="block text-gray-600"> Import customer reviews from AliExpress to build credibility and trust.</span>
+          </div>
+        </li>
+        <li className="flex items-start space-x-4 p-4 bg-white rounded-lg shadow">
+          <BookOpen className="text-blue-500 h-6 w-6 mt-1 flex-shrink-0" />
+          <div>
+            <strong className="text-lg text-gray-900">Module 7:</strong>
+            <span className="block text-gray-600"> Configure payments, market settings, and shipping parameters for smooth and secure transactions.</span>
+          </div>
+        </li>
+        <li className="flex items-start space-x-4 p-4 bg-white rounded-lg shadow">
+          <BookOpen className="text-blue-500 h-6 w-6 mt-1 flex-shrink-0" />
+          <div>
+            <strong className="text-lg text-gray-900">Module 8:</strong>
+            <span className="block text-gray-600"> Test your store by placing test orders before launch.</span>
+          </div>
+        </li>
+        <li className="flex items-start space-x-4 p-4 bg-white rounded-lg shadow">
+          <BookOpen className="text-blue-500 h-6 w-6 mt-1 flex-shrink-0" />
+          <div>
+            <strong className="text-lg text-gray-900">Module 9:</strong>
+            <span className="block text-gray-600"> Explore alternatives like CJDropshipping and Zendrop to enhance your product offering and optimize order fulfillment.</span>
+          </div>
+        </li>
+        <li className="flex items-start space-x-4 p-4 bg-white rounded-lg shadow">
+          <BookOpen className="text-blue-500 h-6 w-6 mt-1 flex-shrink-0" />
+          <div>
+            <strong className="text-lg text-gray-900">Module 10:</strong>
+            <span className="block text-gray-600"> Create a fashion-focused store with Trendsi, leveraging industry trends.</span>
+          </div>
+        </li>
+        <li className="flex items-start space-x-4 p-4 bg-white rounded-lg shadow">
+          <BookOpen className="text-blue-500 h-6 w-6 mt-1 flex-shrink-0" />
+          <div>
+            <strong className="text-lg text-gray-900">Module 11:</strong>
+            <span className="block text-gray-600"> Connect Google Analytics to analyze customer behavior and optimize your marketing strategies.</span>
+          </div>
+        </li>
+        <li className="flex items-start space-x-4 p-4 bg-white rounded-lg shadow">
+          <BookOpen className="text-blue-500 h-6 w-6 mt-1 flex-shrink-0" />
+          <div>
+            <strong className="text-lg text-gray-900">Module 12:</strong>
+            <span className="block text-gray-600"> Launch Facebook ad campaigns to precisely target potential customers and boost your sales.</span>
+          </div>
+        </li>
+        <li className="flex items-start space-x-4 p-4 bg-green-50 rounded-lg shadow border border-green-200">
+          <Star className="text-green-500 h-6 w-6 mt-1 flex-shrink-0" />
+          <div>
+            <strong className="text-lg text-green-800">Bonus:</strong>
+            <span className="block text-green-700"> A complete training course on Facebook Ads, offered for free.</span>
+          </div>
+        </li>
+
+      </ul>
+    </section>
+  );
+}
+
+// Call to Action Section Component
+function CTASection() {
+  return (
+    <section className="cta-section bg-gradient-to-r from-yellow-400 to-orange-500 text-center py-16 px-6 shadow-inner">
+      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        Special Launch Offer!
+      </h2>
+       <p className="text-xl text-gray-800 mb-8">
+         Access the complete course for only <span className="line-through text-red-700">$150</span> <strong className="text-green-800 text-2xl">$49</strong> (Offer limited to the first 100 enrollments)
+       </p>
+      <button className="cta-button bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-md transition duration-300 ease-in-out transform hover:scale-105 flex items-center justify-center mx-auto">
+        Take Advantage of the Offer Now <ArrowRight className="ml-2 h-5 w-5" />
+      </button>
+    </section>
+  );
+}
+
+// FAQ Section Component
+function FAQ() {
+  // Basic state for toggling FAQ items (optional enhancement)
+  // const [openIndex, setOpenIndex] = React.useState(null);
+
+  const faqs = [
+    {
+      q: "Do I need prior technical knowledge?",
+      a: "Absolutely not! This course is designed for beginners and guides you step-by-step, even if you've never created a website before."
+    },
+    {
+      q: "What advertising budget should I plan for starting?",
+      a: "We show you how to start with a small budget (even $5-10 per day) and how to optimize it as your sales grow."
+    },
+    {
+      q: "How much time should I dedicate per week?",
+      a: "It depends on your goals, but a few hours per week are enough to start seeing results. The course is accessible for life, so you can progress at your own pace."
+    },
+    {
+      q: "Can I get a refund if I'm not satisfied?",
+      a: "Yes, we offer a 30-day money-back guarantee. If the course doesn't meet your expectations, contact us for a full refund."
+    }
+  ];
+
+  return (
+    <section className="faq container mx-auto px-6 py-16">
+      <h2 className="text-3xl font-semibold text-center mb-12 text-gray-800">Frequently Asked Questions (FAQ)</h2>
+      <div className="space-y-6 max-w-3xl mx-auto">
+        {faqs.map((faq, index) => (
+          <div key={index} className="faq-item bg-white p-6 rounded-lg shadow-md border border-gray-200">
+            <h3 className="text-lg font-semibold mb-3 flex items-center space-x-2 text-gray-800">
+              <HelpCircle className="text-blue-500 h-5 w-5 flex-shrink-0" />
+              <span>{faq.q}</span>
+            </h3>
+            <p className="text-gray-600 pl-7">{faq.a}</p> {/* Indent answer */}
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+// Footer Component
+function Footer() {
+  return (
+    <footer className="footer bg-gray-800 text-gray-300 text-center py-10 px-6 mt-16">
+      <div className="container mx-auto">
+        <div className="mb-4">
+          <a href="mailto:hiformaxpert@gmail.com" className="hover:text-white flex items-center justify-center space-x-2">
+            <Mail className="h-5 w-5" />
+            <span>Contact us: hiformaxpert@gmail.com</span>
+          </a>
+        </div>
+        <div className="text-sm space-x-4">
+          <a href="#" className="hover:text-white flex items-center justify-center space-x-1 inline-flex"> <FileText className="h-4 w-4" /> <span>Legal Notice</span></a> |
+          <a href="#" className="hover:text-white flex items-center justify-center space-x-1 inline-flex"> <FileText className="h-4 w-4" /> <span>Terms & Conditions</span></a> |
+          <a href="#" className="hover:text-white flex items-center justify-center space-x-1 inline-flex"> <ShieldCheck className="h-4 w-4" /> <span>Privacy Policy</span></a>
+        </div>
+        <p className="mt-6 text-xs text-gray-500">&copy; {new Date().getFullYear()} FormaXpert. All rights reserved.</p>
+      </div>
+    </footer>
+  );
+}

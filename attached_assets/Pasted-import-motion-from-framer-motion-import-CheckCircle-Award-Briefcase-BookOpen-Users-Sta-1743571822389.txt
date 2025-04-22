@@ -1,0 +1,203 @@
+import { motion } from "framer-motion";
+import { CheckCircle, Award, Briefcase, BookOpen, Users, Star } from "lucide-react";
+import { 
+  FaLinkedin, 
+  FaInstagram, 
+  FaYoutube 
+} from "react-icons/fa";
+
+const credentials = [
+  {
+    icon: <Briefcase className="h-6 w-6" />,
+    content: "Over $3.7 million in revenue generated through dropshipping"
+  },
+  {
+    icon: <Users className="h-6 w-6" />,
+    content: "Helped over 500 students succeed with their online businesses"
+  },
+  {
+    icon: <Award className="h-6 w-6" />,
+    content: "Recognized by several e-commerce specialized media"
+  },
+  {
+    icon: <BookOpen className="h-6 w-6" />,
+    content: "Official partner of the Shopify Partners program"
+  }
+];
+
+const testimonials = [
+  {
+    content: "Alexandre's course completely transformed my approach to e-commerce. In 3 months, I was able to create a profitable store.",
+    author: "Marie L.",
+    rating: 5
+  },
+  {
+    content: "His advice on selecting winning products saved me thousands of dollars and valuable time.",
+    author: "Thomas D.",
+    rating: 5
+  }
+];
+
+export default function InstructorSection() {
+  return (
+    <section id="instructor" className="py-20 bg-gradient-to-b from-blue-50 to-white">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16">
+          <motion.span 
+            className="inline-block text-blue-800 font-semibold mb-3 uppercase tracking-wider text-sm"
+            initial={{ opacity: 0, y: -10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            Your Instructor
+          </motion.span>
+          
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-balance">
+            Meet <span className="text-blue-800">Alexandre Dupont</span>
+          </h2>
+          
+          <p className="text-lg text-gray-600 mx-auto">
+            E-commerce entrepreneur who built multiple 7-figure dropshipping stores
+          </p>
+        </div>
+
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+            <motion.div 
+              className="order-2 md:order-1 md:col-span-7"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+            >
+              <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
+                <div className="flex flex-col md:flex-row gap-8 md:items-center mb-8">
+                  <div className="md:w-2/5">
+                    <div className="relative rounded-xl overflow-hidden w-full h-64 mx-auto md:mx-0 shadow-md">
+                      <img 
+                        className="w-full h-full object-cover" 
+                        src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" 
+                        alt="Alexandre Dupont - E-commerce Expert" 
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                      <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+                        <p className="font-semibold text-sm">Alexandre Dupont</p>
+                        <p className="text-xs opacity-90">Entrepreneur since 2017</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="md:w-3/5 text-center md:text-left">
+                    <div className="p-3 px-5 bg-blue-50 text-blue-800 inline-block rounded-full text-sm font-medium mb-3">Dropshipping & E-commerce Expert</div>
+                    <h3 className="text-2xl font-bold text-gray-800 mb-4">Alexandre Dupont</h3>
+                    <div className="flex space-x-4 justify-center md:justify-start mb-4">
+                      <a href="mailto:hiformaxpert@gmail.com" className="text-gray-600 hover:text-blue-600 transition-colors">
+                        <FaLinkedin size={22} />
+                      </a>
+                      <a href="mailto:hiformaxpert@gmail.com" className="text-gray-600 hover:text-pink-600 transition-colors">
+                        <FaInstagram size={22} />
+                      </a>
+                      <a href="mailto:hiformaxpert@gmail.com" className="text-gray-600 hover:text-red-600 transition-colors">
+                        <FaYoutube size={22} />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                
+                <p className="text-gray-700 mb-8 text-lg">
+                  Hello, I'm <span className="font-semibold">Alexandre</span>. After several years of experience 
+                  in e-commerce, I've developed a comprehensive method that has allowed me to generate over $3.7 million 
+                  in revenue. I've condensed all my knowledge into this course to help you avoid mistakes 
+                  and accelerate your path to success.
+                </p>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                  {credentials.map((credential, index) => (
+                    <motion.div 
+                      key={index} 
+                      className="flex items-start bg-gray-50 p-4 rounded-lg"
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: 0.1 * index }}
+                    >
+                      <div className="text-blue-600 mr-3 mt-1">{credential.icon}</div>
+                      <p className="text-gray-700">{credential.content}</p>
+                    </motion.div>
+                  ))}
+                </div>
+                
+                <motion.div 
+                  className="bg-blue-50 p-6 rounded-lg border border-blue-100"
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.5 }}
+                >
+                  <h4 className="text-lg font-semibold text-blue-800 mb-4 flex items-center">
+                    <CheckCircle className="h-5 w-5 mr-2" />
+                    My Commitment to You
+                  </h4>
+                  <p className="text-blue-700">
+                    I commit to providing you with all the resources and support necessary for you 
+                    to create a profitable online store. My goal is your success.
+                  </p>
+                </motion.div>
+              </div>
+            </motion.div>
+            
+            <motion.div 
+              className="order-1 md:order-2 md:col-span-5"
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              <h3 className="text-xl font-bold text-gray-800 mb-5">What My Students Say</h3>
+              
+              <div className="space-y-6">
+                {testimonials.map((testimonial, index) => (
+                  <motion.div 
+                    key={index}
+                    className="bg-gradient-to-br from-white to-blue-50 p-6 rounded-xl shadow-md border border-blue-100 hover:shadow-xl transition-all duration-300"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: 0.3 + (index * 0.1) }}
+                  >
+                    <div className="flex mb-3">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <Star key={i} className="h-5 w-5 fill-current text-yellow-400" />
+                      ))}
+                    </div>
+                    <div className="relative">
+                      <div className="absolute -top-2 -left-2 text-4xl text-blue-300 opacity-30">"</div>
+                      <p className="text-gray-700 mb-4 italic relative z-10 pl-2">"{testimonial.content}"</p>
+                    </div>
+                    <div className="flex items-center mt-4">
+                      <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold mr-3">
+                        {testimonial.author.charAt(0)}
+                      </div>
+                      <p className="text-gray-700 font-medium">{testimonial.author}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+              
+              <motion.div 
+                className="mt-8 bg-gradient-to-r from-blue-800 to-blue-900 p-6 rounded-xl text-white"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+              >
+                <h4 className="text-xl font-bold mb-3">Ready to Start?</h4>
+                <p className="mb-4 opacity-90">Join hundreds of students who have already transformed their lives thanks to this course.</p>
+              </motion.div>
+            </motion.div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

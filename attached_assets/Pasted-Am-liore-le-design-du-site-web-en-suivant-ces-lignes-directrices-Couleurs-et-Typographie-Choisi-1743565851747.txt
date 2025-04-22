@@ -1,0 +1,21 @@
+Améliore le design du site web en suivant ces lignes directrices :
+
+Couleurs et Typographie : Choisis une palette de couleurs modernes et cohérentes qui correspondent à l'image de marque du site. Utilise des typographies lisibles et élégantes, avec une hiérarchie claire pour les titres, sous-titres et textes de corps.
+
+Disposition et Espacement : Organise les sections de manière fluide et logique, avec un bon équilibre entre texte et images. Utilise des marges et espacements appropriés pour éviter que le contenu ne soit trop compact. Assure-toi que le site est bien structuré pour une navigation intuitive.
+
+Responsive Design : Assure-toi que le site est entièrement responsive. Il doit être facile à naviguer et s'adapter parfaitement à différents appareils (ordinateurs de bureau, tablettes et mobiles).
+
+CTA et Interaction :
+
+Place deux appels à l’action (CTA) visibles à des endroits stratégiques du site. Le premier CTA peut être en haut de la page, juste après l'introduction ou la présentation principale, et le deuxième CTA peut être situé à la fin de la page ou à un endroit où l’utilisateur a consommé suffisamment d'informations pour être prêt à agir.
+
+Rends les CTA plus visibles et attractifs en utilisant des couleurs contrastées et des animations subtiles pour attirer l’attention sans être intrusif. Chaque CTA doit être clair et donner une idée précise de ce qu’il déclenche, comme un bouton "Rejoindre maintenant" ou "En savoir plus".
+
+Images et Visuels : Utilise des images de haute qualité qui illustrent le contenu et renforcent le message. Assure-toi que les images sont bien dimensionnées et optimisées pour la vitesse de chargement. Évite les images trop chargées ou floues.
+
+Animations et Micro-interactions : Ajoute des animations légères pour rendre le site plus dynamique. Par exemple, des transitions fluides pour les boutons, les liens, ou lorsque l'utilisateur fait défiler la page. Les micro-interactions, comme un bouton qui change de couleur lorsqu'on le survole, peuvent améliorer l'expérience utilisateur.
+
+Convivialité et Accessibilité : Assure-toi que le site est accessible à tous, y compris aux personnes avec des handicaps. Vérifie la lisibilité du texte, les contrastes, et la facilité de navigation pour les personnes ayant des besoins spécifiques (par exemple, les utilisateurs de lecteurs d’écran).
+
+Optimisation de la vitesse : Optimise la vitesse de chargement en compressant les images et en utilisant un code efficient. Assure-toi que le site charge rapidement pour offrir une meilleure expérience utilisateur.
